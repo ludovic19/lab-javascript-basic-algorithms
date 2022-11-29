@@ -46,7 +46,52 @@ let alphabeticOrder = hacker1.localeCompare(hacker2)
 if (alphabeticOrder<0){
     console.log(` ${hacker1} goes first `)
 }
-else if (alphabeticOrder ){
+else if (alphabeticOrder>0 ){
     console.log(` ${hacker2} goes first `)
 }
 else{console.log("What?! You both have the same name?")};
+
+// ATTENTION: localeCompare() retourne pas le m nbr suivant les navigateurs
+//retenir retour négatif => chaine appelante (la a) en premier
+//        retour positif => chaine comparée (la b) en premier
+//        retour = 0     => chaines identiques
+
+
+// =================================================================
+//                  BONUS 
+// ==================================================================
+
+// Bonus 1
+
+// Go to the lorem ipsum generator website and:
+// Generate 3 paragraphs. Store the text in a new string variable named longText.
+// Make your program count the number of words in the string.
+// Make your program count the number of times the Latin word et appears.
+
+let longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis porttitor tincidunt. Suspendisse fermentum sed nunc a commodo. Nullam sit amet justo ac leo aliquam cursus. Etiam cursus, diam id sagittis dapibus, leo felis scelerisque erat, sed elementum libero arcu vitae metus. Pellentesque mollis, orci a ornare gravida, leo sem sollicitudin purus, at sollicitudin nulla mi sollicitudin orci. Aliquam vitae sagittis ante. Proin scelerisque sem in diam varius laoreet. Nulla metus turpis, sollicitudin et dui id, tristique faucibus nisi. Praesent dapibus auctor sem id accumsan. Integer nisi lacus, fermentum sed condimentum ac, aliquet vitae tellus. Proin lectus risus, elementum fringilla velit id, fermentum sollicitudin lacus. Maecenas a diam libero.
+
+Vivamus ultricies lacus eget velit porttitor pulvinar. Etiam suscipit tortor magna, efficitur auctor mi tempus sit amet. Fusce elit tortor, finibus at urna nec, egestas convallis massa. Suspendisse nec pulvinar massa, in cursus elit. Donec lacinia mattis lacinia. Aenean id velit eget mi bibendum facilisis. Vestibulum sollicitudin, purus nec maximus consectetur, sapien mi vulputate nisl, ut luctus arcu neque sed nunc. Morbi vitae dui ut nulla facilisis lacinia. Phasellus congue congue ligula vitae sollicitudin. Morbi nec nulla at mi vestibulum rutrum at sed dolor. Ut sollicitudin pretium hendrerit. Integer vehicula, ipsum sed efficitur pharetra, arcu risus tincidunt odio, nec dapibus mi dolor cursus ex. Fusce nunc quam, vehicula sed luctus et, varius at quam. Nunc lacinia nibh massa, eget convallis leo pretium sed. Integer in purus eu nulla ultrices molestie at et mi.
+
+Praesent elementum ligula a nibh sollicitudin, quis dapibus justo egestas. In ultrices nulla sed auctor consectetur. Mauris nec lacinia eros, in rhoncus massa. Ut porttitor odio nec augue pretium rutrum. Pellentesque tincidunt sodales mi, sed scelerisque orci eleifend eu. Nam ut aliquet sapien. Sed sagittis lacus massa, quis faucibus lectus molestie id. Nam porttitor ligula nisi, vel hendrerit ante blandit vitae. Nullam hendrerit gravida libero vel bibendum. Nullam eget tristique ligula. Praesent vulputate porta pulvinar. Praesent nec dapibus arcu. Vivamus scelerisque enim est, vitae fringilla nibh feugiat et.`
+
+// console.log(typeof(longText))
+let numberOfWords = console.log(`${longText.length} caracters`)
+
+numberOfWords = longText.split(' ')
+console.log(` ${longText.split(' ').length} words` )// il me manque 2 mots ?!?
+console.log(typeof(numberOfWords))
+
+// str.split(" ") crée un tableau ou chaque élément est défini par le separateur en parametre
+//chaque sous chaine represente un element du tableau
+//on ajoute ici .length qui retourne le nombre d'elements du tableau soit le nbr de mots
+// + .split()accepte un second argument en option pour limiter le nombre d'element du nv tableau
+// for(let i=0; i<numberOfWords.length; i++){
+//     if
+// }
+let numberOfEt = []
+for (const value of numberOfWords){
+    if (value == "et"){
+        numberOfEt += value
+    }
+}
+console.log(numberOfEt.length)
