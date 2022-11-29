@@ -4,7 +4,7 @@
 // 1.3 Create a variable hacker2 with the navigator's name.
 // 1.4 Print "The navigator's name is YYYY".
 
- let hacker1 = 'Snoopp'
+ let hacker1 = 'Snoop'
  console.log(`The diver's name is ${hacker1}`)
  let hacker2 = 'Eminem'
  console.log(`The navigator's name is ${hacker2}`)
@@ -18,8 +18,8 @@
 
 hacker1.length > hacker2.length ? 
 console.log(`the driver ${hacker1} has : ${hacker1.length}`) :
-hacker1.length > hacker2.length ? 
-console.log(`the navigator ${hacker2} has : ${hacker2.length}`) :
+hacker1.length < hacker2.length ? 
+console.log(`the navigator ${hacker2} has : ${hacker2.length} characters`) :
 console.log(` Wow, you both have equally long names, ${hacker2.length} characters!` )
 
 // Iteration 3: Loops
@@ -75,10 +75,9 @@ Vivamus ultricies lacus eget velit porttitor pulvinar. Etiam suscipit tortor mag
 Praesent elementum ligula a nibh sollicitudin, quis dapibus justo egestas. In ultrices nulla sed auctor consectetur. Mauris nec lacinia eros, in rhoncus massa. Ut porttitor odio nec augue pretium rutrum. Pellentesque tincidunt sodales mi, sed scelerisque orci eleifend eu. Nam ut aliquet sapien. Sed sagittis lacus massa, quis faucibus lectus molestie id. Nam porttitor ligula nisi, vel hendrerit ante blandit vitae. Nullam hendrerit gravida libero vel bibendum. Nullam eget tristique ligula. Praesent vulputate porta pulvinar. Praesent nec dapibus arcu. Vivamus scelerisque enim est, vitae fringilla nibh feugiat et.`
 
 // console.log(typeof(longText))
-let numberOfWords = console.log(`${longText.length} caracters`)
+let numberOfWords = console.log(` ${longText.split(' ').length} words` )// il me manque 2 mots ?!?
 
 numberOfWords = longText.split(' ')
-console.log(` ${longText.split(' ').length} words` )// il me manque 2 mots ?!?
 console.log(typeof(numberOfWords))
 
 // str.split(" ") crée un tableau ou chaque élément est défini par le separateur en parametre
