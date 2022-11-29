@@ -24,6 +24,16 @@ for (let i = hacker1.length-1; i>=0; i--){
     newHacker1 += hacker1[i]
 }
 console.log(newHacker1)
+
+
+let alphabeticOrder = console.log(hacker1.localeCompare(hacker2))
+if (alphabeticOrder= -1){
+    console.log(` ${hacker1} goes first `)
+}
+else if (alphabeticOrder =1){
+    console.log(` ${hacker2} goes first `)
+}
+else{console.log("What?! You both have the same name?")}
 // Iteration 1: Names and Input
 // 1.1 Create a variable hacker1 with the driver's name.
 // 1.2 Print "The driver's name is XXXX".
