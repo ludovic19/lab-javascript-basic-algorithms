@@ -3,7 +3,6 @@
 // 1.2 Print "The driver's name is XXXX".
 // 1.3 Create a variable hacker2 with the navigator's name.
 // 1.4 Print "The navigator's name is YYYY".
-
  let hacker1 = 'Snoop'
  console.log(`The diver's name is ${hacker1}`)
  let hacker2 = 'Eminem'
@@ -15,19 +14,19 @@
 // - The driver has the longest name, it has XX characters. or
 // - It seems that the navigator has the longest name, it has XX characters. or
 //- Wow, you both have equally long names, XX characters!.
-
 hacker1.length > hacker2.length ? 
 console.log(`the driver ${hacker1} has : ${hacker1.length}`) :
 hacker1.length < hacker2.length ? 
 console.log(`the navigator ${hacker2} has : ${hacker2.length} characters`) :
 console.log(` Wow, you both have equally long names, ${hacker2.length} characters!` )
 
+
 // Iteration 3: Loops
 // 3.1 Print the characters of the driver's name, separated by space, and in capital letters, i.e., "J O H N".
-
 let newHacker1= ' '
 for (let i = 0; i<hacker1.length; i++){
-    newHacker1 += hacker1[i]+' '
+    // newHacker1 += hacker1[i]+' '
+    newHacker1 += `${hacker1[i]} `// meilleure pratique
 }
 console.log(newHacker1.toUpperCase())
 
@@ -43,13 +42,18 @@ console.log(newHacker2)
 // Yo, the navigator goes first definitely.
 // What?! You both have the same name?
 let alphabeticOrder = hacker1.localeCompare(hacker2)
-if (alphabeticOrder<0){
-    console.log(` ${hacker1} goes first `)
-}
-else if (alphabeticOrder>0 ){
-    console.log(` ${hacker2} goes first `)
-}
-else{console.log("What?! You both have the same name?")};
+// if (alphabeticOrder<0){
+//     console.log(` ${hacker1} goes first `)
+// }
+// else if (alphabeticOrder>0 ){
+//     console.log(` ${hacker2} goes first `)
+// }
+// else{console.log("What?! You both have the same name?")};
+
+alphabeticOrder<0 ? console.log(` ${hacker1} goes first `):
+alphabeticOrder>0 ? console.log(`YO ${hacker2} goes first `):
+console.log("What?! You both have the same name?");
+
 
 // ATTENTION: localeCompare() retourne pas le m nbr suivant les navigateurs
 //retenir retour négatif => chaine appelante (la a) en premier
